@@ -20,6 +20,7 @@ namespace Play.Inventory.Service.Controllers
       this.itemsRepository = itemsRepository;
     }
 
+    [HttpGet]
     public async Task<ActionResult<IEnumerable<InventoryItemDto>>> GetAsync(Guid UserId)
     {
       if (UserId == Guid.Empty)
@@ -33,6 +34,7 @@ namespace Play.Inventory.Service.Controllers
       return Ok(items);
     }
 
+    [HttpPost]
     public async Task<ActionResult> PostAsyc(GrantItemsDto grantItemsDto)
     {
       var InventoryItem = await itemsRepository.GetAsync(
