@@ -15,5 +15,4 @@ namespace Play.Inventory.Service.Entities
 
     public DateTimeOffset AquiredDate { get; set; }
   }
-
 }
