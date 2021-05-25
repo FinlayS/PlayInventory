@@ -59,7 +59,7 @@ namespace Play.Inventory.Service.Controllers
           AquiredDate = DateTimeOffset.UtcNow
         };
 
-        await itemsRepository.CreatAsync(inventoryItem);
+        await itemsRepository.CreateAsync(inventoryItem);
       }
       else
       {
